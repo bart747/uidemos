@@ -1,0 +1,31 @@
+{{define "layout"}}
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>UIs</title>
+  <meta name="description" content="x">
+  <title>UI Demos (deliverables)</title>
+
+  <!-- DNS prefetching for external assets  -->
+  <link rel="dns-prefetch" href="//platform.twitter.com">
+
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,700" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/bundle.css">
+</head>
+<body>
+
+  <div class="wrapper">
+  <h1>UI Demos</h1>
+  </div>
+
+  {{template "signUpForm"}}
+  {{template "mastheads"}}
+
+<script src="assets/js/dist/bundle.js"></script>
+</body>
+</html>
+{{end}}

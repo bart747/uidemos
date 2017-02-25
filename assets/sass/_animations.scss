@@ -1,0 +1,59 @@
+@keyframes btnLight {
+  0% {
+    background: $blue;
+  }
+  50% {
+    background: lighten($blue-light, 5%);
+    transform: translate(0, -1px);
+  }
+  100% {
+    background: $blue-light;
+    
+  }
+}
+
+@keyframes show-msg {
+  from {
+    opacity: 0.75;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.anim--show {
+  animation-name: show;
+  animation-duration: 0.25s;
+  animation-timing-function: ease-in;
+}
+
+@mixin anim--show-msg {
+  animation-name: show-msg;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes hide {
+  0% {
+    position: static;
+    left: 0;
+    right: 0;
+  }
+  100% {
+    position: absolute;
+    right: -1500px;
+  }
+}
+
+.anim--hide {
+  animation-name: hide;
+  animation-duration: 0.25s;
+  animation-timing-function: ease-out;
+}
+
+@mixin anim--hide {
+  animation-name: hide;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}

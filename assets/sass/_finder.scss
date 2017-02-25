@@ -1,0 +1,33 @@
+.finder {
+  max-width: 34rem;
+  margin: 1rem auto 2rem;
+}
+
+.finder textarea {
+  font-size: $large-font-size;
+  font-family: $base-font-family;
+  line-height: $base-line-height;
+  margin: 1rem auto;
+  padding: ( $large-font-size - 1px);
+  width: auto;
+  min-width: 100%;
+  height: auto;
+  min-height: 10rem;
+  border-radius: $radius;
+  @media (max-width: $screen-sml) {
+    font-size: $medium-font-size;
+  }
+}
+
+.finder textarea:focus {
+  outline: none;
+  border-color: $blue;
+}
+
+.finder input {
+  max-width: 20rem;
+}
+
+.finder-hl {
+  
+}

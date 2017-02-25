@@ -1,0 +1,642 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>UIs</title>
+  <meta name="description" content="x">
+  <title>UI Demos (deliverables)</title>
+
+  
+  <link rel="dns-prefetch" href="//platform.twitter.com">
+
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,700" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/bundle.css">
+</head>
+<body>
+
+  <div class="wrapper">
+  <h1>UI Demos</h1>
+  </div>
+
+  
+
+<section class="wrapper">
+
+  <h2 class="section-title">Responsive Sign-Up Form</h2>
+  <p>Emphasis on universality and precise error messages.</p>
+
+  <form class="form--stack form--sign-up">
+
+    <div class="success-message">
+      <div class="success-message--content">
+        <svg fill="#00ee00" height="48" viewBox="0 0 24 24" width="48" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 0h24v24H0z" fill="none"/>
+        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+        </svg>
+        <br>
+        Success
+      </div>
+    </div>
+
+    <fieldset>
+    <div class="input-box input-box--email">
+      <label for="signup-email">
+        your email
+      </label> 
+      <input class=" " id="signup-email" type="email" required>
+      <div class="input-error-txt input-error-txt--at">
+        Too many “@” symbols.
+      </div>
+      <div class="input-error-txt input-error-txt--dot">
+        “ . ” is used at a wrong position.
+      </div>
+      <div class="input-error-txt input-error-txt--general">
+        Please enter a valid email address.
+      </div>
+    </div>
+
+    <div class="input-box input-box--password">
+      <label for="password">
+        create password
+      </label> 
+      <input id="password" type="password" required>
+      <div class="label-subtext">
+        Use at least 6 characters including a number.
+      </div>
+
+      <div class="password-strength password-strength--ind1">
+        <span class="s-bar"><span class="red">&mdash;</span>&mdash;&mdash;</span>
+        <span class="red-txt">weak</span>
+      </div>
+      <div class="password-strength password-strength--ind2">
+        <span class="s-bar"><span class="orange">&mdash;&mdash;</span>&mdash;</span>
+        medium
+      </div>
+      <div class="password-strength password-strength--ind3">
+        <span class="s-bar green">&mdash;&mdash;&mdash;</span>
+        strong
+      </div>
+
+      <div class="input-error-txt input-error-txt--len">
+        Please use at least 6 characters.
+      </div>
+      <div class="input-error-txt input-error-txt--num">
+        Please use a number in your password.
+      </div>
+      <div class="input-error-txt input-error-txt--general">
+        Please create a valid password.
+      </div>
+    </div>
+    <button type="button" class="">Create Account</button>
+    </fieldset>
+
+  </form>
+
+  <form class="form--stack form--sign-up password-strength--3">
+
+    <div id="msg--anim-demo1" class="success-message">
+      <div class="success-message--content">
+        <svg fill="#00ee00" height="48" viewBox="0 0 24 24" width="48" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 0h24v24H0z" fill="none"/>
+        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+        </svg>
+        <br>
+        Success
+      </div>
+    </div>
+
+    <fieldset>
+    <div class="input-box input-box--email input-error input-error--dot">
+      <label for="signup-email">
+        your email
+      </label> 
+      <input id="signup-email" type="email" required value="myemail@fakemail..com">   
+      <div class="input-error-txt input-error-txt--at">
+        Too many “@” symbols.
+      </div>
+      <div class="input-error-txt input-error-txt--dot">
+        “ . ” is used at a wrong position.
+      </div>
+      <div class="input-error-txt input-error-txt--general">
+        Please enter a valid email address.
+      </div>
+    </div>
+
+    <div class="input-box input-box--password">
+      <label for="password">
+        create password
+      </label> 
+      <input id="password" type="password" required value="dummypass">
+      <div class="label-subtext">
+        Use at least 6 characters including a number.
+      </div>
+
+      <div class="password-strength password-strength--ind1">
+        <span class="s-bar"><span class="red">&mdash;</span>&mdash;&mdash;</span>
+        <span class="red-txt">weak</span>
+      </div>
+      <div class="password-strength password-strength--ind2">
+        <span class="s-bar"><span class="orange">&mdash;&mdash;</span>&mdash;</span>
+        medium
+      </div>
+      <div class="password-strength password-strength--ind3">
+        <span class="s-bar green">&mdash;&mdash;&mdash;</span>
+        strong
+      </div>
+
+      <div class="input-error-txt input-error-txt--len">
+        Please use at least 6 characters.
+      </div>
+      <div class="input-error-txt input-error-txt--num">
+        Please use a number in your password.
+      </div>
+      <div class="input-error-txt input-error-txt--general">
+        Please create a valid password.
+      </div>
+    </div>
+    <button type="button" class="">Create Account</button>
+    </fieldset>
+
+  </form>
+  <ul>
+    <li>
+      <i>Create password</i> signals that you're about to create a new account.
+      You don't <i>create</i> a password while logging in. The button copy works in similar way.
+    </li>
+    <li>
+      There's a bunch of error text messages in HTML form.
+      They are not displayed &mdash; <i>display: none</i>.
+      If error is detected, the proper message gets <i>display: block</i>.
+      That way there's not much DOM manipulation &mdash;
+      to mark an error you just add a CSS class to an HTML element.
+    </li>
+  </ul>
+
+
+  <h3>Multiple errors example</h3>
+  <form class="form--stack form--sign-up">
+
+    <div id="msg--anim-demo1" class="success-message">
+      <div class="success-message--content">
+        <svg fill="#00ee00" height="48" viewBox="0 0 24 24" width="48" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 0h24v24H0z" fill="none"/>
+        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+        </svg>
+        <br>
+        Success
+      </div>
+    </div>
+
+    <fieldset>
+    <div class="input-box input-box--email input-error input-error--dot input-error--at">
+      <label for="signup-email">
+        your email
+      </label> 
+      <input id="signup-email" type="email" required value="myemail@@fakemail..com">   
+      <div class="input-error-txt input-error-txt--at">
+        Too many “@” symbols.
+      </div>
+      <div class="input-error-txt input-error-txt--dot">
+        “ . ” is used at a wrong position.
+      </div>
+      <div class="input-error-txt input-error-txt--general">
+        Please enter a valid email address.
+      </div>
+    </div>
+
+    <div class="input-box input-box--password input-error input-error--num password-strength--1">
+      <label for="password">
+        create password
+      </label> 
+      <input id="password" type="password" required value="dummypass">
+      <div class="label-subtext">
+        Use at least 6 characters including a number.
+      </div>
+
+      <div class="password-strength password-strength--ind1">
+        <span class="s-bar"><span class="red">&mdash;</span>&mdash;&mdash;</span>
+        <span class="red-txt">weak</span>
+      </div>
+      <div class="password-strength password-strength--ind2">
+        <span class="s-bar"><span class="orange">&mdash;&mdash;</span>&mdash;</span>
+        medium
+      </div>
+      <div class="password-strength password-strength--ind3">
+        <span class="s-bar green">&mdash;&mdash;&mdash;</span>
+        strong
+      </div>
+      
+      <div class="input-error-txt input-error-txt--len">
+        Please use at least 6 characters.
+      </div>
+      <div class="input-error-txt input-error-txt--num">
+        Please use a number in your password.
+      </div>
+      <div class="input-error-txt input-error-txt--general">
+        Please create a valid password.
+      </div>
+    </div>
+    <button type="button" class="">Create Account</button>
+    </fieldset>
+
+  </form>
+
+
+  <h3>General message for rare errors (just in case)</h3>
+  <form class="form--stack form--sign-up">
+
+    <div id="msg--anim-demo1" class="success-message">
+      <div class="success-message--content">
+        <svg fill="#00ee00" height="48" viewBox="0 0 24 24" width="48" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 0h24v24H0z" fill="none"/>
+        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+        </svg>
+        <br>
+        Success
+      </div>
+    </div>
+
+    <fieldset>
+    <div class="input-box input-box--email input-error input-error--general">
+      <label for="signup-email">
+        your email
+      </label> 
+      <input id="signup-email" type="email" required value="myemail@fakemail.com'">   
+      <div class="input-error-txt input-error-txt--at">
+        Too many “@” symbols.
+      </div>
+      <div class="input-error-txt input-error-txt--dot">
+        “ . ” is used at a wrong position.
+      </div>
+      <div class="input-error-txt input-error-txt--general">
+        Please enter a valid email address.
+      </div>
+    </div>
+
+    <div class="input-box input-box--password input-error input-error--general password-strength--1">
+      <label for="password">
+        create password
+      </label> 
+      <input id="password" type="password" required value="dummypass">
+      <div class="label-subtext">
+        Use at least 6 characters including a number.
+      </div>
+
+      <div class="password-strength password-strength--ind1">
+        <span class="s-bar"><span class="red">&mdash;</span>&mdash;&mdash;</span>
+        <span class="red-txt">weak</span>
+      </div>
+      <div class="password-strength password-strength--ind2">
+        <span class="s-bar"><span class="orange">&mdash;&mdash;</span>&mdash;</span>
+        medium
+      </div>
+      <div class="password-strength password-strength--ind3">
+        <span class="s-bar green">&mdash;&mdash;&mdash;</span>
+        strong
+      </div>
+      
+      <div class="input-error-txt input-error-txt--len">
+        Please use at least 6 characters.
+      </div>
+      <div class="input-error-txt input-error-txt--num">
+        Please use a number in your password.
+      </div>
+      <div class="input-error-txt input-error-txt--general">
+        Please create a valid password.
+      </div>
+    </div>
+    <button type="button" class="">Create Account</button>   
+    </fieldset>
+
+  </form>
+
+
+  <h3>Password strength indicator</h3>
+  <p>Since we want to keep it responsive (screen agnostic), a long bar aside won't cut it. 
+     We need something more compact.</p> 
+  <p>Another issue is complicating users life. We shouldn't create password requirements that produce a lot of friction.
+     No one is filling in forms for fun. It's an <i>unfortunately unavoidable step</i>.
+     There has to be a <b>sane balance</b> between ease of creating, memorizing and difficulty of cracking.
+  </p>
+  <p>My assumption here is that once a password meets basic requirements (6+ signs including a number),
+     the bar is set to <i>medium</i>.
+     If it's longer and got a special character or an uppercase letter the bar says <i>strong</i>.
+  </p>
+
+
+  <form class="form--stack form--sign-up">
+
+    <div id="msg--anim-demo1" class="success-message">
+      <div class="success-message--content">
+        <svg fill="#00ee00" height="48" viewBox="0 0 24 24" width="48" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 0h24v24H0z" fill="none"/>
+        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+        </svg>
+        <br>
+        Success
+      </div>
+    </div>
+
+    <fieldset>
+    <div class="input-box input-box--email">
+      <label for="signup-email">
+        your email
+      </label> 
+      <input id="signup-email" type="email" required value="myemail@fakemail.com">   
+      <div class="input-error-txt input-error-txt--at">
+        Too many “@” symbols.
+      </div>
+      <div class="input-error-txt input-error-txt--dot">
+        “ . ” is used at a wrong position.
+      </div>
+      <div class="input-error-txt input-error-txt--general">
+        Please enter a valid email address.
+      </div>
+    </div>
+
+    <div class="input-box input-box--password password-strength--1 password-strength--2 password-strength--3">
+      <label for="password">
+        create password
+      </label> 
+      <input id="password" type="password" required value="dummypass">
+      <div class="label-subtext">
+        Use at least 6 characters including a number.
+      </div>
+
+      <div class="password-strength password-strength--ind1">
+        <span class="s-bar"><span class="red">&mdash;</span>&mdash;&mdash;</span>
+        <span class="red-txt">weak</span>
+      </div>
+      <div class="password-strength password-strength--ind2">
+        <span class="s-bar"><span class="orange">&mdash;&mdash;</span>&mdash;</span>
+        medium
+      </div>
+      <div class="password-strength password-strength--ind3">
+        <span class="s-bar green">&mdash;&mdash;&mdash;</span>
+        strong
+      </div>
+
+      <div class="input-error-txt input-error-txt--len">
+        Please use at least 6 characters.
+      </div>
+      <div class="input-error-txt input-error-txt--num">
+        Please use a number in your password.
+      </div>
+      <div class="input-error-txt input-error-txt--general">
+        Please create a valid password.
+      </div>
+    </div>
+    <button type="button" class="">Create Account</button>   
+    </fieldset>
+  <i><small>all options</small></i>
+  </form>
+
+  <form class="form--stack form--sign-up">
+
+    <div id="msg--anim-demo1" class="success-message">
+      <div class="success-message--content">
+        <svg fill="#00ee00" height="48" viewBox="0 0 24 24" width="48" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 0h24v24H0z" fill="none"/>
+        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+        </svg>
+        <br>
+        Success
+      </div>
+    </div>
+
+    <fieldset>
+    <div class="input-box input-box--email">
+      <label for="signup-email">
+        your email
+      </label> 
+      <input id="signup-email" type="email" required value="myemail@fakemail.com">   
+      <div class="input-error-txt input-error-txt--at">
+        Too many “@” symbols.
+      </div>
+      <div class="input-error-txt input-error-txt--dot">
+        “ . ” is used at a wrong position.
+      </div>
+      <div class="input-error-txt input-error-txt--general">
+        Please enter a valid email address.
+      </div>
+    </div>
+
+    <div class="input-box input-box--password password-strength--2">
+      <label for="password">
+        create password
+      </label> 
+      <input id="password" type="password" required value="dummypass">
+      <div class="label-subtext">
+        Use at least 6 characters including a number.
+      </div>
+      <div class="password-strength password-strength--ind1">
+        <span class="s-bar"><span class="red">&mdash;</span>&mdash;&mdash;</span>
+        <span class="red-txt">weak</span>
+      </div>
+      <div class="password-strength password-strength--ind2">
+        <span class="s-bar"><span class="orange">&mdash;&mdash;</span>&mdash;</span>
+        medium
+      </div>
+      <div class="password-strength password-strength--ind3">
+        <span class="s-bar green">&mdash;&mdash;&mdash;</span>
+        strong
+      </div>
+      <div class="input-error-txt input-error-txt--len">
+        Please use at least 6 characters.
+      </div>
+      <div class="input-error-txt input-error-txt--num">
+        Please use a number in your password.
+      </div>
+      <div class="input-error-txt input-error-txt--general">
+        Please create a valid password.
+      </div>
+    </div>
+    <button type="button" class="">Create Account</button>   
+    </fieldset>
+
+  </form>
+
+
+  <h3>Feedback Animations</h3>
+  <p>Animations are triggered by assigning CSS classes to HTML elements.</p>
+  <ol>
+    <li>
+      <p>Live-update password strength bars.  
+    </li>
+    <li>
+      <p>Brighten up the button when all inputs are filled and a user stopped typing
+      (A debounce function will be handy).</p> 
+      <p>It's a hint that the form is technically ready to be sent.
+      At that moment we still don't know if a user finished creating the password,
+      so giving authentication feedback &mdash; like <i>check</i> marks &mdash; could be annoying.</p>
+    </li>
+    <li>
+      <p>After pressing the button, if everything went right, show feedback message &mdash; <i>success</i>.</p>
+    </li>
+    <li>
+      <p>Go to a <i>My Account</i> page.</p>
+    </li>
+  </ol>
+
+  <form id="form--anim-demo1" class="form--stack form--sign-up">
+
+    <div id="msg--anim-demo1" class="success-message">
+      <div class="success-message--content">
+        <svg fill="#00ee00" height="48" viewBox="0 0 24 24" width="48" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 0h24v24H0z" fill="none"/>
+        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+        </svg>
+        <br>
+        Success
+      </div>
+    </div>
+
+    <fieldset id="fieldset--anim-demo1">
+    <div class="input-box input-box--email ">
+      <label for="signup-email">
+        your email
+      </label> 
+      <input id="signup-email" type="email" required value="myemail@fakemail.com">   
+      <div class="input-error-txt input-error-txt--at">
+        Too many “@” symbols.
+      </div>
+      <div class="input-error-txt input-error-txt--dot">
+        “ . ” is used at a wrong position.
+      </div>
+      <div class="input-error-txt input-error-txt--general">
+        Please enter a valid email address.
+      </div>
+    </div>
+
+    <div id="pass--anim-demo1" class="input-box input-box--password password-strength--2">
+      <label for="password">
+        create password
+      </label> 
+      <input id="password" type="password" required value="dummypass">
+      <div class="label-subtext">
+        Use at least 6 characters including a number.
+      </div>
+
+      <div class="password-strength password-strength--ind1">
+        <span class="s-bar"><span class="red">&mdash;</span>&mdash;&mdash;</span>
+        <span class="red-txt">weak</span>
+      </div>
+      <div class="password-strength password-strength--ind2">
+        <span class="s-bar"><span class="orange">&mdash;&mdash;</span>&mdash;</span>
+        medium
+      </div>
+      <div class="password-strength password-strength--ind3">
+        <span class="s-bar green">&mdash;&mdash;&mdash;</span>
+        strong
+      </div>
+
+      <div class="input-error-txt input-error-txt--len">
+        Please use at least 6 characters.
+      </div>
+      <div class="input-error-txt input-error-txt--num">
+        Please use a number in your password.
+      </div>
+      <div class="input-error-txt input-error-txt--general">
+        Your password doesn't meet requirements.
+      </div>
+    </div>
+    <button id="btn--anim-demo1" type="button" class="">Create Account</button>
+    </fieldset>
+  
+  </form>
+ 
+<div class="center">
+  <button type="button" id="play-anim--form" class="play">Play Animations</button>
+</div>
+</section>
+
+
+  
+<section class="">
+
+<div class="wrapper">
+
+  <h2 class="section-title">Mastheads</h2>
+  <p>Mastheads are pieces of content on the top of a home page.
+    It's where the headline and sub-headline/bullet-points with your selling proposition are presented.</p>
+
+  <p>The main goal is to make it impactful &mdash; catch the visitor's eye and clearly present the message</p>
+
+  <p>Other issue is to create it without any extra fonts or fancy scripts.
+    With half-decent wi-fi and cheap smartphones they will slow down the performance.</p>
+
+<div class="masthead">
+  
+  <div class="masthead-title masthead-title--colored">The <span class="blue">Quick Brown Fox</span><br>Jumps Over the Lazy Dog</div>
+  <div class="masthead-subtitle masthead-subtitle--upper">A Tiny Bird Sits on a Kangaroo</div>
+  <div class="masthead-subtext">
+    <p>“It’s a white whale, I say,” resumed Ahab, as he threw down the topmaul:“a white whale.</p>
+    <p>Skin your eyes for him, men; look sharp for white water; if ye see but a bubble, sing out.”</p>
+  </div> 
+
+</div>
+
+<div class="masthead center">
+  
+  <div class="masthead-title masthead-title--colored">The<br><span class="orange">Quick Brown Fox</span><br>Jumps Over the Lazy Dog</div>
+  <div class="masthead-subtitle masthead-subtitle--upper">A Tiny Bird Sits on a Kangaroo</div>
+  <div class="masthead-subtext masthead-subtext--center">
+    <p>“It’s a white whale, I say,” resumed Ahab, as he threw down the topmaul:“a white whale.</p>
+    <p>Skin your eyes for him, men; look sharp for white water; if ye see but a bubble, sing out.”</p>
+  </div> 
+
+</div>
+
+<div class="masthead masthead--grid">
+  <div class="col col-50 masthead-pic">
+     <img src="assets/dummy.png">
+  </div>
+  
+  <div class="col col-50">
+    <div class="masthead-title masthead-title--colored">The Quick Brown Fox<br>Jumps Over the Lazy Dog</div>
+    <div class="masthead-subtitle masthead-subtitle--upper">A Tiny Bird Sits on a Kangaroo</div>
+    <div class="masthead-subtext">
+      <p>“It’s a white whale, I say,” resumed Ahab, as he threw down the topmaul:“a white whale.</p>
+      <p>Skin your eyes for him, men; look sharp for white water; if ye see but a bubble, sing out.”</p>
+    </div> 
+  </div>
+</div>
+<i>In the above example I resigned from using the orange highlight. I don't want any visual competition for the picture.</i>
+
+</div>
+
+<div class="masthead center masthead--background">
+  <div class="masthead-title masthead-title--colored">The <span class="white">Quick Brown Fox</span><br>Jumps Over the Lazy Dog</div>
+  <div class="masthead-subtitle masthead-subtitle--upper">A Tiny Bird Sits on a Kangaroo</div>
+
+  <div class="masthead-subtext masthead-subtext--center">
+    <p>“It’s a white whale, I say,” resumed Ahab, as he threw down the topmaul:“a white whale.</p>
+    <p>Skin your eyes for him, men; look sharp for white water; if ye see but a bubble, sing out.”</p>
+  </div> 
+</div>
+
+<div class="wrapper">
+<div class="masthead">
+  <div class="masthead-title masthead-title--colored">
+   The<span class="orange">
+   Quick Brown Fox</span> Jumps Over the Lazy Dog.
+   A <span class="blue">Tiny Bird</span>
+   Sits on a Kangaroo.</div>
+
+   <div class="masthead-subtitle masthead-subtitle">
+    A Tiny Bird
+    Sits on a Kangaroo. Three and Five 75% Yogurt.
+  </div>
+</div>
+</div>
+
+</section>
+
+
+<script src="assets/js/dist/bundle.js"></script>
+</body>
+</html>

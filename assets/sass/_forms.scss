@@ -1,0 +1,148 @@
+
+form {
+  margin: 2rem auto;
+  max-width: 20rem;
+  overflow-x: hidden;
+}
+
+fieldset {
+  margin: 0 0 1rem;
+  padding: 0;
+  border: none;
+  max-width: 20rem;
+  transition: all 0.2s; 
+}
+
+input {
+  display: block;
+  font-family: $base-font-family;
+  font-size: $large-font-size;
+  width: 100%;
+  padding: (0.5 * $large-font-size - 2px) (0.6 * $large-font-size - 2px);
+  border: solid $grey;
+  border-width: 2px;
+  border-radius: 3px;
+}
+
+input:focus {
+  border-color: $blue;
+  outline: none;
+}
+
+label {
+  display: block; 
+  font-size: $medium-font-size;
+  font-weight: bold;
+  margin-top: 0.7rem;
+}
+
+.label-subtext {
+  color: darken($grey, 10%);
+  font-size: $medium-font-size;
+  line-height: 1.25;
+  margin: 0.25em 0
+}
+
+.input-error input {
+  background-image: url(/assets/ic_warning_red_18px.svg);
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+.input-error input { 
+  border-color: $red;
+}
+
+.input-error-txt {
+  display: none;
+}
+
+.password-strength {
+  display: none;
+  font-size: $medium-font-size;
+  line-height: 1.25;
+  margin: 0.25em 0;
+  @include anim--show-msg;
+}
+
+
+.input-error--dot .input-error-txt--dot,
+.input-error--at .input-error-txt--at,
+.input-error--len .input-error-txt--len,
+.input-error--num .input-error-txt--num,
+.input-error--general .input-error-txt--general,
+.password-strength--1 .password-strength--ind1,
+.password-strength--2 .password-strength--ind2,
+.password-strength--3 .password-strength--ind3 {
+  display: block;
+}
+
+.input-error--general .input-error-txt--general {
+  display: block;
+}
+
+.s-bar {
+  font-weight: bold;
+  transform: color 5s;
+}
+
+.input-error-txt {
+  color: $red-txt;
+  font-size: $medium-font-size;
+  line-height: 1.25;
+  margin: 0.25em 0
+}
+
+.form--sign-up {
+  min-height: 16rem;
+}
+
+button.btn--highlight {
+  @include btn($blue-light);
+  animation-name: btnLight;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+}
+
+.form--sign-up button {
+  margin: 1rem auto 0;
+  width: 100%;
+  max-width: none;
+}
+
+.form--success fieldset {
+  position: absolute;
+  opacity: 0;
+  transition: all 0.2s;
+  transform: scale(0.75);
+}
+
+.success-message {
+  display: none;
+  position: absolute;
+  text-align: center;
+  margin: 3rem auto 0;
+  width: 4rem;
+  opacity: 0;
+}
+
+.form--success .success-message {
+  display: block;
+  position: absolute;
+  left: 50%;
+  transition: opacity 0.75s;
+  opacity: 1;
+}
+
+.success-message--content {
+  position: relative;
+  left: -50%;
+}
+
+#form--anim-demo1 {
+  margin-bottom: 1rem;
+}
+
+
+
+
